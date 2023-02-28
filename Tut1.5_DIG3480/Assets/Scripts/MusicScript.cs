@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MusicScript : MonoBehaviour
 {
+    public AudioSource musicSource; 
+
+    public AudioClip musicClipOne;
+
+    public AudioClip musicClipTwo; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +19,12 @@ public class MusicScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.W)){
+            musicSource.clip = musicClipOne;
+            musicSource.Play(); 
+        }
+        if(Input.GetKeyUp(KeyCode.W)){
+            musicSource.Stop();
+        }
     }
 }
