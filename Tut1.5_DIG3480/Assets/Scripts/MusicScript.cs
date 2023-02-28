@@ -17,8 +17,8 @@ public class MusicScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+        //audio clip 1
         if(Input.GetKeyDown(KeyCode.W)){
             musicSource.clip = musicClipOne;
             musicSource.Play(); 
@@ -26,13 +26,21 @@ public class MusicScript : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.W)){
             musicSource.Stop();
         }
-
+        //audio clip 2
         if(Input.GetKeyDown(KeyCode.R)){
             musicSource.clip = musicClipTwo;
             musicSource.Play(); 
         }
         if(Input.GetKeyUp(KeyCode.R)){
             musicSource.Stop();
+        }
+        //add loop
+         if (Input.GetKeyDown(KeyCode.L)){
+          musicSource.loop = true;
+         }
+
+        if (Input.GetKeyUp(KeyCode.L)){
+          musicSource.loop = false;
         }
     }
 }
