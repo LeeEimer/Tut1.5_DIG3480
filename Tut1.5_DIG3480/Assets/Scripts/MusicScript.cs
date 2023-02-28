@@ -20,7 +20,7 @@ public class MusicScript : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        //audio clip 1
+        //audio clip 1 + Walk
         if(Input.GetKeyDown(KeyCode.W)){
             musicSource.clip = musicClipOne;
             musicSource.Play(); 
@@ -30,7 +30,7 @@ public class MusicScript : MonoBehaviour
             musicSource.Stop();
             anim.SetInteger("State", 0);
         }
-        //audio clip 2
+        //audio clip 2 + Run
         if(Input.GetKeyDown(KeyCode.R)){
             musicSource.clip = musicClipTwo;
             musicSource.Play(); 
